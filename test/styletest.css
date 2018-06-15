@@ -1,7 +1,7 @@
 html {
     background-color: black;
     color: white;
-    font-family: monospace;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 h1 {
@@ -20,7 +20,7 @@ h2 {
 
 p {
     font-size: 2vh;
-    line-height: 2.5vh;
+    line-height: 2.6vh;
 }
 
 a:link {
@@ -78,6 +78,7 @@ a:visited {
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 25vh;
+    margin-bottom: 15vh;
     text-align: justify;
 }
 
