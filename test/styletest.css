@@ -1,11 +1,10 @@
 html {
     background-color: black;
     color: white;
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: 'IBM Plex Mono', monospace; /* tag html link a google font <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> */
 }
 
 h1 {
-    font-family: monospace;
     font-size: 22pt;
     line-height: 22pt;
     text-align: left;
@@ -18,10 +17,18 @@ h2 {
     padding: 0;
 }
 
+em {
+    font-size-adjust: 18pt;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+}
 
 p {
-    font-size: 2vh;
-    line-height: 2.6vh;
+/*  font-size: 2vh;
+    line-height: 2.6vh; valori in percentuale, nel caso servissero */ 
+    font-size: 12pt;
+    line-height: 14pt;
 }
 
 a:link {
@@ -81,12 +88,20 @@ a:visited {
 .paragrafo {
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: 25vh;
-    margin-bottom: 35vh;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
     text-align: justify;
+    overflow: auto; /* il paragrafo dipende dalla dimensione dell'immagine */
+}
+.paragrafo-primo {
+    margin-top: 25vh;
 }
 
-.paragrafo-img {
+.paragrafo-ultimo {
+    margin-bottom: 10vh;
+}
+
+.paragrafo-img-componenti {
     max-width: 66%;
     height: auto;
     float: left; 
@@ -96,56 +111,55 @@ a:visited {
     padding-right: 2vw;
 }
 
-.paragrafo-img-2 {
+.paragrafo-img-dx {
     float: right; 
     padding-right: 0;
     padding-left: 3vw;
+} /* valutare se non fare tutto a sx, forse meglio mettere testo a badiera sx e foto a dx */
+
+.img-band {
+    display: block;
+    height: 55vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
 }
+
+.galleria0 {
+    width: 0%;
+    height: 0%;
+}
+
+.freccia {
+    width: 5vh;
+    height: 5vh;
+    top: 50vh;
+    position: absolute;
+    color: white;
+    z-index: 1;
+}
+
+#freccia-sx {
+    left: 15vw;
+    content: "a"
+}
+
+#freccia-dx {
+    right: 15vw;
+    content: ">";
+}
+
+/*
+.galleria5 {
+    width: 5%;
+    height: 5%;
+    display: inline;
+    margin-left: auto;
+    margin-bottom: 3vh;
+}
+*/
 
 .footer {
     text-align: center;
-    margin-top: -10vh;
-}
-
-#contenuto-pagina {
-    top: 21vh;
-    left: 5vw;
-    position: absolute;
-    width: 90vw;
-    height: auto; 
-}
-
-#contenuto-pagina-2 {
-    top: 102vh;
-    left: 5vw;
-    position: absolute;
-    width: 90vw;
-    height: auto; 
-}
-
-#contenuto-pagina-3 {
-    top: 182vh;
-    left: 5vw;
-    position: absolute;
-    width: 90vw;
-    height: auto; 
-}
-#contenuto-pagina-4 {
-    top: 262vh;
-    left: 5vw;
-    position: absolute;
-    width: 90vw;
-    height: auto; 
-}
-
-.contenuto-testo {
-    height: auto;
-    width: 30vw;
-}
-
-.contenuto-testo-sx {
-    height: auto;
-    width: 30vw;
-    left: 0px;
-    position: absolute;
 }
