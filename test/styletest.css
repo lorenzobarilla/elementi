@@ -78,10 +78,11 @@ a:visited {
     margin-left: 10vw;
     margin-right: 10vw;
     margin-top: 25vh;
+    text-align: justify;
 }
 
 .paragrafo-img {
-    width: 66%;
+    max-width: 66%;
     height: auto;
     float: left; 
     background-repeat: no-repeat;
