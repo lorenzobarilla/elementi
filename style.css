@@ -31,6 +31,7 @@ p {
     line-height: 15pt;
 }
 
+/*
 a:link {
     color: white;
     text-decoration: none;
@@ -50,6 +51,7 @@ a:visited {
     color: white;
     text-decoration: none;
 }
+*/
 
 #menu {
     width: 100%;
@@ -114,6 +116,11 @@ a:visited {
     z-index: 1;
 }
 
+.titolo a:link, a:hover, a:active, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
 .vocemenu {
     list-style-type: none;
     top: 16vh;
@@ -127,6 +134,29 @@ a:visited {
     line-height: 14pt;
     text-align: right;
     transform: translateY(-28pt);
+}
+
+.vocemenu a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+.vocemenu a:hover, a:active {
+    color: red;
+    text-decoration: none;    
+}
+
+.vocemenu-paginacorrente a:link, a:visited {
+    border: 0px;
+    border-bottom: 2px;
+    border-style: solid;
+    border-bottom-color: white;    
+}
+
+.vocemenu-paginacorrente a:hover, a:active {
+    border: 0;
+    border-bottom: 2px;
+    border-style: solid;
+    border-bottom-color: red;  
 }
 
 .paragrafo {
@@ -163,7 +193,7 @@ a:visited {
 
 .img-band {
     display: block;
-    height: 55vh;
+    height: 60vh;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -178,20 +208,19 @@ a:visited {
 .freccia {
     width: 5vh;
     height: 5vh;
-    top: 50vh;
+    top: 38vh;
     position: absolute;
     color: white;
     z-index: 1;
+    padding: 8vw;
 }
 
 #freccia-sx {
-    left: 15vw;
-    content: "a"
+    left: 5vw;
 }
 
 #freccia-dx {
-    right: 15vw;
-    content: ">";
+    right: 5vw;
 }
 
 .video {
@@ -201,7 +230,6 @@ a:visited {
     margin-right: auto;
     display: block;
     margin-bottom: 15vh;
-    background-color: aqua;
 }
 
 .video-ultimo {
