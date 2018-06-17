@@ -135,6 +135,11 @@ a:visited {
 .titolo a:link, a:hover, a:active, a:visited {
     color: white;
     text-decoration: none;
+    border: 0;
+}
+
+.titolo a:active {
+    color: white;
 }
 
 .vocemenu {
