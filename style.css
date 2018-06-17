@@ -1,6 +1,7 @@
 html {
     background-color: black;
     color: white;
+    overflow-y: scroll;
     font-family: 'IBM Plex Mono', monospace; /* tag html link a google font <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> */
 }
 
@@ -75,9 +76,15 @@ a:visited {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+}
+
+.menu-home {
+    display: inline-table;
     animation-name: comparsa;
-    animation-duration: 1s;
-    animation-delay: 1s;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
 }
 
 .vocemenu-home {
@@ -87,6 +94,15 @@ a:visited {
     text-align: center;
     margin-left: 5vw;
     margin-right: 5vw;
+}
+
+.vocemenu-home a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
+.vocemenu-home a:hover, a:active {
+    font-weight: bold;
+    border: 0;
 }
 
 .titolo-home {
@@ -103,8 +119,8 @@ a:visited {
 }
 
 @keyframes comparsa {
-    0% {color: black;}
-    100% {color: white;}
+    0% {opacity: 0;}
+    100% {opacity: 100;}
 }
 
 .titolo {
@@ -140,6 +156,7 @@ a:visited {
     color: white;
     text-decoration: none;
 }
+
 .vocemenu a:hover, a:active {
     color: red;
     text-decoration: none;    
@@ -244,4 +261,19 @@ a:visited {
 .footer {
     text-align: center;
     font-size: 10pt;
+}
+
+.contatti a:link, a:visited {
+    color: white;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+}
+
+.contatti a:hover, a:active {
+    color: red;
+}
+
+ul {
+    list-style: none;
 }
