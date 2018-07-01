@@ -1,0 +1,284 @@
+html {
+    background-color: black;
+    color: white;
+    overflow-y: scroll;
+    font-family: 'IBM Plex Mono', monospace; /* tag html link a google font <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> */
+}
+
+h1 {
+    font-size: 22pt;
+    line-height: 22pt;
+    text-align: left;
+    font-weight: normal;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
+em {
+    font-size-adjust: 18pt;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: bold;
+}
+
+p {
+/*  font-size: 2vh;
+    line-height: 2.6vh; valori in percentuale, nel caso servissero */ 
+    font-size: 12pt;
+    line-height: 15pt;
+}
+
+/*
+a:link {
+    color: white;
+    text-decoration: none;
+}
+    
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+    
+a:active {
+    color: red;
+    text-decoration: none;
+}
+    
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+*/
+
+#menu {
+    width: 100%;
+    height: 18vh;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+.centro {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#menu-home {
+    width: 80%;
+    margin-top: 80vh;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.menu-home {
+    display: inline-table;
+    animation-name: comparsa;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+}
+
+.vocemenu-home {
+    display: inline;
+    font-size: 14pt;
+    line-height: 14pt;
+    text-align: center;
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+.vocemenu-home a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
+.vocemenu-home a:hover, a:active {
+    font-weight: bold;
+    border: 0;
+}
+
+.titolo-home {
+    text-align: center; 
+    font-size: 36pt; 
+    line-height: 40pt; 
+    top: 40%; 
+    left: 50%; 
+    position: absolute; 
+    transform: translate(-50%, -50%);
+    animation-name: comparsa;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes comparsa {
+    0% {opacity: 0;}
+    100% {opacity: 100;}
+}
+
+.titolo {
+    position: fixed;
+    top: 0px;
+    margin-top: 16vh;
+    margin-left: 5vw;
+    transform: translateY(-44pt);
+    z-index: 1;
+}
+
+.titolo a:link, a:hover, a:active, a:visited {
+    color: white;
+    text-decoration: none;
+    border: 0;
+}
+
+.titolo a:active {
+    color: white;
+}
+
+.vocemenu {
+    list-style-type: none;
+    top: 16vh;
+    right: 5vw;
+    position: relative;
+    display: inline-block;
+    float: right;
+    padding-left: 4vw;
+    font-family: monospace;
+    font-size: 14pt;
+    line-height: 14pt;
+    text-align: right;
+    transform: translateY(-28pt);
+}
+
+.vocemenu a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+.vocemenu a:hover, a:active {
+    color: red;
+    text-decoration: none;    
+}
+
+.vocemenu-paginacorrente a:link, a:visited {
+    border: 0px;
+    border-bottom: 2px;
+    border-style: solid;
+    border-bottom-color: white;    
+}
+
+.vocemenu-paginacorrente a:hover, a:active {
+    border: 0;
+    border-bottom: 2px;
+    border-style: solid;
+    border-bottom-color: red;  
+}
+
+.paragrafo {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+    text-align: justify;
+    overflow: auto; /* il paragrafo dipende dalla dimensione dell'immagine */
+}
+.paragrafo-primo {
+    margin-top: 25vh;
+}
+
+.paragrafo-ultimo {
+    margin-bottom: 5vh;
+}
+
+.paragrafo-img-componenti {
+    max-width: 66%;
+    height: auto;
+    float: left; 
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-height: 65vh;
+    padding-right: 2vw;
+}
+
+.paragrafo-img-dx {
+    float: right; 
+    padding-right: 0;
+    padding-left: 3vw;
+} /* valutare se non fare tutto a sx, forse meglio mettere testo a badiera sx e foto a dx */
+
+.img-band {
+    display: block;
+    height: 60vh;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
+}
+
+.galleria0 {
+    width: 0%;
+    height: 0%;
+}
+
+.freccia {
+    width: 5vh;
+    height: 5vh;
+    top: 38vh;
+    position: absolute;
+    color: white;
+    z-index: 1;
+    padding: 8vw;
+}
+
+#freccia-sx {
+    left: 5vw;
+}
+
+#freccia-dx {
+    right: 5vw;
+}
+
+.video {
+    max-width: 80vw;
+    max-height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 15vh;
+}
+
+.video-ultimo {
+    margin-bottom: 5vh;
+}
+
+.musica-titoli {
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.footer {
+    text-align: center;
+    font-size: 10pt;
+}
+
+.contatti a:link, a:visited {
+    color: white;
+    font-weight: bold;
+    list-style: none;
+    text-decoration: none;
+}
+
+.contatti a:hover, a:active {
+    color: red;
+}
+
+ul {
+    list-style: none;
+}

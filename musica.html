@@ -2,7 +2,7 @@
     <head>
         <title>Musica</title>
         <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Economica:700" rel="stylesheet"> 
         <script src="jquery.min.js"></script>
         <meta charset="utf-8" />
     </head>
@@ -15,22 +15,101 @@
                 <li class="vocemenu"><a href="componenti.html">componenti</a></li>
                 <li class="vocemenu"><a href="band.html">band</a></li>
             </ul>
-            <h1 class="titolo"><a href="index.html">Screwdriver<br>& Nuts</a></h1>
+            <h1 class="titolo"><a href="index.html">Screwdriver&Nuts</a></h1>
         </div>
         
-        <div class="paragrafo paragrafo-primo paragrafo-ultimo">
-            <h2 class="musica-titoli">Dani California - Red Hot Chili Peppers</h2>
-            <video src="video/dani_california-low.mp4" controls class="video"></video>
+        <div class="paragrafo paragrafo-primo paragrafo-ultimo" style="overflow: visible;">      
+            <ul id="elencovideo">
+                <li class="elencovideo-voci" style="pointer-events: none;"><h2>AUDIO E VIDEO</h2></li>
+                <li id="voce1" class="elencovideo-voci elenco-riproduzione"><em>Dani California</em><br>Red Hot Chili Peppers</li>
+                <li id="voce2" class="elencovideo-voci"><em>Thunderstruck</em><br>Ac/Dc</li>
+                <li id="voce3" class="elencovideo-voci"><em>Californication</em><br>Red Hot Chili Peppers</li>
+                <li id="voce4" class="elencovideo-voci"><em>Mountain Song</em> (audio)<br>Jane's Addiction</li>
+            </ul>
             
-            <h2 class="musica-titoli">Mountain Song - Jane's Addiction</h2>
-            <audio src="audio/mountain-song.mp3" controls class="video"></audio>
-            
-            <h2 class="musica-titoli">Thunderstruck - Ac/Dc</h2>
-            <video src="video/thunderstruck-low.mp4" controls class="video"></video>
-            
-            <h2 class="musica-titoli">Californication - Red Hot Chili Peppers</h2>
-            <video src="video/californication-low.mp4" controls class="video video-ultimo"></video>
+        <div>
+                <video id="video1" src="video/dani_california-low.mp4" controls class="boxvideo" controlsList="nodownload"></video>
+                <video id="video2" src="video/thunderstruck-low.mp4" controls  class="boxvideo galleria0" controlsList="nodownload"></video>    
+                <video id="video3" src="video/californication-low.mp4" controls class="boxvideo galleria0" controlsList="nodownload"></video>
+                <div id="video4" class="galleria0">
+                    <audio src="audio/mountain-song.mp3" controls class="boxvideo audiotovideo" controlsList="nodownload"></audio>
+            </div>
         </div>
+                
+        </div>
+        
+        <script>
+            
+            $("#voce1").click(video1);
+            $("#voce2").click(video2);
+            $("#voce3").click(video3);
+            $("#voce4").click(video4);
+            
+            function video1() {
+                if ($("#video1").hasClass("galleria0")) {
+                    ($("#video1").removeClass("galleria0"));
+                    ($("#video2").addClass("galleria0"));
+                    ($("#video3").addClass("galleria0"));
+                    ($("#video4").addClass("galleria0"));
+                    ($("#voce1").addClass("elenco-riproduzione"));
+                    ($("#voce2").removeClass("elenco-riproduzione"));
+                    ($("#voce3").removeClass("elenco-riproduzione"));
+                    ($("#voce4").removeClass("elenco-riproduzione"));
+                }
+                
+                else {}
+            }
+            
+            function video2() {
+                if ($("#video2").hasClass("galleria0")) {
+                    ($("#video2").removeClass("galleria0"));
+                    ($("#video1").addClass("galleria0"));
+                    ($("#video3").addClass("galleria0"));
+                    ($("#video4").addClass("galleria0"));
+                    ($("#voce2").addClass("elenco-riproduzione"));
+                    ($("#voce1").removeClass("elenco-riproduzione"));
+                    ($("#voce3").removeClass("elenco-riproduzione"));
+                    ($("#voce4").removeClass("elenco-riproduzione"));
+                }
+                
+                else {}
+            }
+            
+            function video3() {
+                if ($("#video3").hasClass("galleria0")) {
+                    ($("#video3").removeClass("galleria0"));
+                    ($("#video1").addClass("galleria0"));
+                    ($("#video2").addClass("galleria0"));
+                    ($("#video4").addClass("galleria0"));
+                    ($("#voce3").addClass("elenco-riproduzione"));
+                    ($("#voce1").removeClass("elenco-riproduzione"));
+                    ($("#voce2").removeClass("elenco-riproduzione"));
+                    ($("#voce4").removeClass("elenco-riproduzione"));
+                }
+                
+                else {}
+            }
+            
+            function video4() {
+                if ($("#video4").hasClass("galleria0")) {
+                    ($("#video4").removeClass("galleria0"));
+                    ($("#video1").addClass("galleria0"));
+                    ($("#video2").addClass("galleria0"));
+                    ($("#video3").addClass("galleria0"));
+                    ($("#voce4").addClass("elenco-riproduzione"));
+                    ($("#voce1").removeClass("elenco-riproduzione"));
+                    ($("#voce2").removeClass("elenco-riproduzione"));
+                    ($("#voce3").removeClass("elenco-riproduzione"));
+                }
+                
+                else {}
+            }
+        
+        
+        
+        </script>
+        
+        
         
         <footer class="footer">Sito web creato da Lorenzo Barilla - © Screwdriver&Nuts 2018</footer>
     </body>
