@@ -338,7 +338,8 @@ ul {
 }
 
 .boxvideo {
-    background-color: rgb(15, 15, 15);    width: 75%;
+    background-color: rgb(15, 15, 15);    
+    width: 75%;
     height: auto;
     max-height: 65vh;
     left: 0;
@@ -347,7 +348,7 @@ ul {
 
 .audiotovideo {
     width: 75%;
-    height: 60%;
+    height: 100%;
     position: relative; 
     margin: auto; 
     color: white; 
@@ -360,7 +361,7 @@ ul {
 .galleria0 {
     width: 0%;
     height: 0%;
-    left: -100px;
+    left: -100000px;
     position: absolute;
 }
 
@@ -405,7 +406,7 @@ ul {
     margin-bottom: 5vh;
     text-align: left;
     box-shadow: -10px 10px darkgrey;
-    overflow: visible;
+    overflow-x: hidden;
 }
 
 .vocicontatti {
